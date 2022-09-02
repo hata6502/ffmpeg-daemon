@@ -32,7 +32,6 @@ const handleFile = async (path: string) => {
         );
         await writeFile(destinationPath, ffmpeg.FS("readFile", mp4Filename));
         await rename(path, `${path}.converted`);
-        return;
       }
     }
   } catch (exception) {
